@@ -55,7 +55,7 @@ def busca_google():
 
     print('Buscando...')
     
-    while contador <= 3:
+    while contador <= 25:
 
         os.system('cls')
         print(f'Número de registros: {len(quantidade["tel"])}')
