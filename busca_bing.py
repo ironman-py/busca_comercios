@@ -8,6 +8,7 @@ from time import sleep
 import pandas as pd
 import os
 import string
+import unicodedata
 
 
 def busca_bing():
@@ -93,8 +94,9 @@ def busca_bing():
             
 
             nome_filtrado = ''.join(n for n in n.text if n not in string.punctuation).upper()
-            if nome_filtrado not in dados['nome']:
-                dados['nome'].append(nome_filtrado)
+            nome_filtrado_sem_acentuacao = unicodedata.normalize('NFD',nome_filtrado).encode('ascii', 'ignore').decode('ascii')
+            if nome_filtrado_sem_acentuacao not in dados['nome']:
+                dados['nome'].append(nome_filtrado_sem_acentuacao)
 
                 tel_filtrado = ''.join(t for t in t.text if t not in string.punctuation)
      
