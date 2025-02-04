@@ -6,7 +6,7 @@ while True:
 
     print('Busca Bot')
     print('Em qual ferramenta deseja fazer a busca?')
-    print('1 - Google | 2 - Bing')
+    print('1 - Google | 2 - Bing(Em Construção)')
     opcao = input('-> ')
     os.system('cls')
 

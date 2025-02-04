@@ -143,4 +143,3 @@ def busca_bing():
     with pd.ExcelWriter(f'{tipo_comercio}_{cidade}.xlsx') as writer:
         df.to_excel(writer, header=True)
         
-    
