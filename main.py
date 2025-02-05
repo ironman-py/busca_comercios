@@ -1,6 +1,7 @@
 from busca_bing import busca_bing
 from busca_google import busca_google
 import os
+from junta_arquivos import list_join
 
 while True:
 
@@ -19,7 +20,7 @@ while True:
     os.system('cls')
     
     print('O que deseja fazer?')
-    print('1 - Outra busca | 2 - Sair')
+    print('1 - Outra busca | 2 - Sair | 3 - Juntar Arquivos')
     escolha = input('-> ')
     os.system('cls')
 
@@ -30,3 +31,6 @@ while True:
         break
     
         exit()
+
+    if escolha == '3':
+        list_join()

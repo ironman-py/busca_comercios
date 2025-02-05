@@ -13,6 +13,7 @@ import unicodedata
 import json
 
 
+
 def busca_google():
 
 
@@ -106,6 +107,8 @@ def busca_google():
     df = pd.DataFrame(quantidade)
     with pd.ExcelWriter(f'{cidade}_{categoria}.xlsx') as writer:
         df.to_excel(writer, index=False, header=True)
+
+    
 
 
 
